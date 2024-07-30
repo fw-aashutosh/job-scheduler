@@ -1,0 +1,57 @@
+Database 
+
+	table Job:
+		id:
+		user_id:
+		function_path:
+		function_name: 
+		interval:
+		is_recurring:
+		created_time
+		status: [ACTIVE, DISABLED]
+
+	table Task Execution:
+		id:
+		job_id: Job
+		start_time: 
+		end_time: 
+		status: [Scheduled, Started, Completed, Failed]
+		last_updated_time:
+
+
+class JobController:
+
+	def create():
+		pass
+
+	def createTaskExecution():
+		pass
+
+
+class SchedulerController:
+	
+	def getScheduledTasks():
+		return "select * from TaskExecution where time<present_time and status=Scheduled"
+
+	def perform():
+		tasks = getScheduledTasks()
+		markTaskWithStatus(tasks, status=STARTED)
+		for task in tasks:
+			ExecutionWorker.perform_async(task)
+
+		pass
+
+	def markTaskWithStatus(tasks, status):
+		pass
+
+
+class ExecutionWorker:
+
+	def updateTaskStatus():
+		pass
+
+	def perform(task):
+		pass
+
+	def scheduleNextTask():
+		pass
