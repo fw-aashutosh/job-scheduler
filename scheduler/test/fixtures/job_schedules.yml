@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2024-08-01 18:11:50
+  end_time: 2024-08-01 18:11:50
+  interval_type: MyString
+  interval_value: 1
+  time_of_day: 2024-08-01 18:11:50
+  job: one
+
+two:
+  start_time: 2024-08-01 18:11:50
+  end_time: 2024-08-01 18:11:50
+  interval_type: MyString
+  interval_value: 1
+  time_of_day: 2024-08-01 18:11:50
+  job: two
