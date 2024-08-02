@@ -1,0 +1,11 @@
+:concurrency: 1
+:queues:
+  - default
+  - mailers
+
+
+:scheduler:
+  :schedule:
+    scheduler_job:
+      cron: "* * * * *"
+      class: "SchedulerWorker"
